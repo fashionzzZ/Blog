@@ -1,7 +1,7 @@
 # Fashion's Blog
 
 **多线程与高并发**
-* [初识线程](blog/docs/juc/thread)
+* [初识线程](./docs/juc/thread.md)
 * [集合](./docs/juc/collection)
 * [ThreadLocal](./docs/juc/thread-local)
 * [AQS](./docs/juc/abstract-queued-synchronizer)
