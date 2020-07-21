@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fashion's Blog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Fashion's Blog">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="https://www.ultroncode.com/source/avatar.jpg" sizes="32x32">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css"> -->
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    // if (typeof navigator.serviceWorker !== 'undefined') {
+    //   navigator.serviceWorker.register('sw.js')
+    // }
+    window.$docsify = {
+      name: 'Fashion',
+      repo: 'https://github.com/fashionzzZ',
+      loadSidebar: true,
+      loadNavbar: true,
+      // 封面
+      coverpage: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      pagination: {
+        previousText: '上一篇',
+        nextText: '下一篇',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      // 搜索
+      search: {
+        maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+        paths: 'auto',                      // or 'auto'，匹配文件路径
+        placeholder: 'Type to search',  // 搜索提示框文字， 支持本地化，例子在下面
+        // placeholder: {
+        //   '/zh-cn/': '搜索',
+        //   '/': 'Type to search'
+        // },
+        noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+        // noData: {
+        //   '/zh-cn/': '找不到结果',
+        //   '/': 'No Results'
+        // },
+        depth: 3,                       // 搜索标题的最大程级, 1 - 6
+      },
+      // 字数统计
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      }
+    }
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c466ac3d75695ef4ef76cd0fab6ad76b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!-- 图片缩放 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- 搜索模块 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- 代码复制 -->
+  <!-- <script src="//unpkg.com/docsify-copy-code"></script> -->
+  <!-- 代码高亮 -->
+  <!-- <script src="//unpkg.com/docsify"></script> -->
+  <!-- 分页 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <!-- 评论插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    // 评论
+    const gitalk = new Gitalk({
+      clientID: '0b81894346819710b49f',
+      clientSecret: '2061c5996a66a00e8e3780beaa269a73c0c54d11',
+      repo: 'Fashion-Blog',
+      owner: 'fashionzzZ',
+      admin: ['fashionzzZ'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
+</body>
+
+</html>
