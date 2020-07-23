@@ -1,16 +1,3 @@
----
-title: 设计模式-Singleton模式
-author: Freedom
-date: 2020-01-19
-tags: [设计模式]
-categories: 
-- 设计模式
-- 创建型
-description: 创建型模式由两个主导思想构成。一是将系统使用的具体类封装起来，二是隐藏这些具体类的实例创建和结合的方式。
----
-
-`创建型模式由两个主导思想构成。一是将系统使用的具体类封装起来，二是隐藏这些具体类的实例创建和结合的方式。`
-
 ### 单例模式（Singleton Pattern）
 
 #### 定义
@@ -19,7 +6,7 @@ description: 创建型模式由两个主导思想构成。一是将系统使用�
 
 #### 类图
 
-![单例模式类图](https://www.ultroncode.com/source/0a17dffafacec24a0dcfa15da758c487.png)
+![单例模式类图](https://ultroncode.com/source/015734c18c9ecd3dc90e8821e2b33527.png)
 
 #### 说明
 

@@ -55,7 +55,7 @@ static Hashtable<UUID, UUID> m = new Hashtable<>();
 
 `h = key.hashCode()) ^ (h >>> 16)`
 
-![哈希算法](https://www.ultroncode.com/source/9752a44fb323b140f8bdb3fe0c507185.jpg)
+![哈希算法](https://ultroncode.com/source/bc23adf4c762587967f7c92f1b91e293.png)
 
 #### 计算下标算法
 
@@ -143,7 +143,7 @@ public class TestConcurrentMap {
 
 有序
 
-![跳表原理图](https://www.ultroncode.com/source/0f91bbb2abb3ef3c2ce904e8983a72db.jpg)
+![跳表原理图](https://ultroncode.com/source/2771b38902507fd11f97f0b8088c6139.jpg)
 
 从上往下遍历
 

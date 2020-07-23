@@ -1,14 +1,3 @@
----
-title: 设计模式-Template Method模式
-author: Freedom
-date: 2020-01-20
-tags: [设计模式]
-categories: 
-- 设计模式
-- 行为型
-description: 在父类中定义处理流程的框架，在子类中实现具体处理的模式称为Templete Method模式。
----
-
 ### Template Method模式
 
 #### 定义

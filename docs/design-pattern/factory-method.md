@@ -1,14 +1,3 @@
----
-title: 设计模式-Factory Method模式
-author: Freedom
-date: 2020-01-21
-tags: [设计模式]
-categories: 
-- 设计模式
-- 创建型
-description: 定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法是一个类的实例化延迟到其子类。
----
-
 ### Factory Method模式
 
 #### 定义

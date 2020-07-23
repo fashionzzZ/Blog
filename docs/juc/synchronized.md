@@ -12,7 +12,7 @@ Synchronized用的锁是存在Java对象头里的`Mark Word`中的。
 
 下面是64位虚拟机下，`Mark Word`的存储结构：
 
-![64位MarkWord存储结构](https://www.ultroncode.com/source/5f3ae009a7ac4b71795e5179ad25caed.png)
+![64位MarkWord存储结构](/Users/mr.wu/Library/Application Support/typora-user-images/image-20200722174156714.png)
 
 ### 锁的升级
 
@@ -30,7 +30,7 @@ Synchronized用的锁是存在Java对象头里的`Mark Word`中的。
 
    一旦出现另外一个线程去尝试获取这个锁的情况，偏向模式就马上宣告结束。根据锁对象目前是否处于被锁定的状态决定是否撤销偏向（偏向模式设置为“0”），撤销后标志位恢复到为锁定（标志位为“01”）或轻量级锁（标志位为“00”）的状态，后续的同步操作就按照轻量级锁那行去执行。
 
-![锁状态转换流程](https://www.ultroncode.com/source/e00e6737a707572472893090503c35ad.jpg)
+![锁状态转换流程](https://ultroncode.com/source/17534e7d61554616b86d15fc3a8ba26d.png)
 
 > 当一个对象已经计算过`hashcode`后，它就再也无法进入偏向锁状态了；而当一个对象当前正处于偏向锁状态，又收到需要计算其`hashcode`请求时，它的偏向状态会被立即撤销，并且锁会膨胀为重量级锁，在`Mark Word`中记录指向该重量级锁的指针，并在重量级锁中存储原对象的`hashcode`。
 >

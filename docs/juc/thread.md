@@ -82,7 +82,7 @@ Thread t2 = new Thread(() -> {
 
 ### 线程的状态
 
-![线程状态图](https://www.ultroncode.com/source/6995d0efedcfbbdeab64b4adeec8baba.jpg)
+![线程状态图](https://ultroncode.com/source/c2407e8f0d46a68f736366efa6ca0521.jpg)
 
 #### NEW
 

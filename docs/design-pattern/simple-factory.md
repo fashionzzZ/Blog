@@ -1,14 +1,3 @@
----
-title: 设计模式-Simple Factory模式
-author: Freedom
-date: 2020-01-19
-tags: [设计模式]
-categories: 
-- 设计模式
-- 创建型
-description: 在创建一个对象时不向客户暴露内部细节，并提供一个创建对象的通用接口。
----
-
 ### 简单工厂（Simple Factory）
 
 #### 定义
