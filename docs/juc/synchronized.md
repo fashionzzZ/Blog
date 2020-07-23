@@ -12,7 +12,7 @@ Synchronized用的锁是存在Java对象头里的`Mark Word`中的。
 
 下面是64位虚拟机下，`Mark Word`的存储结构：
 
-![64位MarkWord存储结构](/Users/mr.wu/Library/Application Support/typora-user-images/image-20200722174156714.png)
+![64位MarkWord存储结构](https://ultroncode.com/source/c24bf6f691fd927cccbd4a58291785ed.png)
 
 ### 锁的升级
 
