@@ -257,7 +257,7 @@ ThreadPoolExecutor的父类是AbstractExecutorService，AbstractExecutorService�
    当任务队列和线程池都满了，说明线程池处于饱和状态，那么必须采取一种策略处理新提交的任务。这个策略默认情况下是AbortPolicy，表示无法处理新任务时抛出异常。Java线程池框架提供了以下4种策略：
 
    - AbortPolicy：直接抛出异常。
-   - CallerRunsPolicy：只用调用者所在的线程来运行任务。
+   - CallerRunsPolicy：使用调用者所在的线程来运行任务。
    - DiscardOldestPolicy：丢弃队列里最老的任务，把新任务添加到队列。
    - DiscardPolicy：不处理，丢弃掉。
 
