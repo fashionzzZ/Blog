@@ -10,5 +10,5 @@
 * Mail:xuefa921@163.com
 
 [GitHub](https://github.com/fashionzzZ)
-[Get Started](#fashion39s-blog-持续更新中)
+[开始阅读](#fashion39s-blog-持续更新中)
 
