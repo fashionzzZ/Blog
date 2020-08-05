@@ -1,23 +1,88 @@
-## LeetCode题解-双指针
+# LeetCode算法笔记
+
+---
+
+## Hash
+
+### [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
+
+```java
+/**
+ * 题解：
+ *
+ * 弄一个HashMap，遍历数组中的元素，每遍历一个元素，判断(target - 当前元素)的值是否存在HashMap中
+ * - 如果存在，返回HashMap中元素的下标和当前元素的下标
+ * - 如果不存在，将`当前元素`作为Key，下标作为Value存入到HashMap中
+ */
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            } else {
+                map.put(nums[i], i);
+            }
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+}
+```
+
+### [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+
+```java
+/**
+ * 题解：
+ *
+ * 声明一个26长度的int数组，存放26个英文字母出现的个数
+ * 遍历两遍原始字符串
+ * 第一遍统计字符串中每个字母的个数存放在数组中，下标是（当前字母 - 'a'）
+ * 第二遍根据每个字母的下标（当前字母 - 'a'），返回第一个元素为1的下标
+ */
+class Solution {
+    public int firstUniqChar(String s) {
+        int[] count = new int[26];
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            count[s.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < n; i++) {
+            if (count[s.charAt(i) - 'a'] == 1) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+```
+
+
+---
+
+## 双指针
 
 `双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。`
 
-### [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+### [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
-#### 题目：167. Two Sum II - Input array is sorted (Easy)
-给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
+给定一个已按照升序排列的有序数组，找到两个数使得它们相加之和等于目标数。
 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。
 
 #### 说明
+
 - 返回的下标值（index1 和 index2）不是从零开始的。
 - 你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
 
 #### 示例
+
 > **输入: ** numbers = [2, 7, 11, 15], target = 9
 > **输出:** [1,2]
 > **解释:** 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
 
 #### 思路
+
 使用双指针，一个指针(index1)指向值较小的元素，一个指针(index2)指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。
 
 > - 如果`sum == target`，直接return结果。
@@ -47,17 +112,9 @@ class Solution {
 }
 ```
 
-#### 结果
-
-> - 17/17 cases passed (1 ms)
-> - Your runtime beats 99.08 % of java submissions
-> - Your memory usage beats 56.44 % of java submissions (37.9 MB)
-
 ---
 
-### [平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
-
-#### 题目：633. Sum of Square Numbers (Easy)
+### [633. 平方数之和](https://leetcode-cn.com/problems/sum-of-square-numbers/)
 
 给定一个非负整数 `c` ，你要判断是否存在两个整数 `a` 和 `b`，使得`a2 + b2 = c`。
 
@@ -99,17 +156,9 @@ class Solution {
 }
 ```
 
-#### 结果
-
-> - 124/124 cases passed (2 ms)
-> - Your runtime beats 97.55 % of java submissions
-> - Your memory usage beats 81.88 % of java submissions (33.1 MB)
-
 ---
 
-### [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
-
-#### 题目：345. Reverse Vowels of a String (Easy)
+### [345. 反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/)
 
 编写一个函数，以字符串作为输入，反转该字符串中的元音字母。
 
@@ -162,17 +211,9 @@ class Solution {
 }
 ```
 
-#### 结果
-
-> - 481/481 cases passed (3 ms)
-> - Your runtime beats 95.98 % of java submissions
-> - Your memory usage beats 99.5 % of java submissions (36.7 MB)
-
 ---
 
-### [验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
-
-#### 题目：680. Valid Palindrome II (Easy)
+### [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
 
 给定一个非空字符串 `s`，**最多**删除一个字符。判断是否能成为回文字符串。
 
@@ -227,15 +268,9 @@ class Solution {
 
 #### 结果
 
-> - 460/460 cases passed (6 ms)
-> - Your runtime beats 91.81 % of java submissions
-> - Your memory usage beats 92.37 % of java submissions (38.4 MB)
-
 ---
 
-### [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
-
-#### 题目：88. Merge Sorted Array (Easy)
+### [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 给定两个有序整数数组 *nums1* 和 *nums2*，将 *nums2* 合并到 *nums1* 中*，*使得 *num1* 成为一个有序数组。
 
@@ -281,17 +316,9 @@ class Solution {
 }
 ```
 
-#### 结果
-
-> - 59/59 cases passed (0 ms)
-> - Your runtime beats 100 % of java submissions
-> - Your memory usage beats 81.83 % of java submissions (36.2 MB)
-
 ---
 
-### [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
-
-#### 题目：141. Linked List Cycle (Easy)
+### [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 
 给定一个链表，判断链表中是否有环。
 
@@ -322,17 +349,9 @@ public class Solution {
 }
 ```
 
-#### 结果
-
-> - 17/17 cases passed (0 ms)
-> - Your runtime beats 100 % of java submissions
-> - Your memory usage beats 96.66 % of java submissions (37.5 MB)
-
 ---
 
 ### [通过删除字母匹配到字典里最长单词](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)
-
-#### 题目：Longest Word in Dictionary through Deleting (Medium)
 
 给定一个字符串和一个字符串字典，找到字典里面最长的字符串，该字符串可以通过删除给定字符串的某些字符来得到。如果答案不止一个，返回长度最长且字典顺序最小的字符串。如果答案不存在，则返回空字符串。
 
@@ -393,16 +412,6 @@ class Solution {
 }
 ```
 
-#### 结果
-
-> - 31/31 cases passed (26 ms)
-> - Your runtime beats 69.79 % of java submissions
-> - Your memory usage beats 96.59 % of java submissions (38.9 MB)
-
 ---
 
-### 参考资料
-
-- Leetcode
-- [Leetcode 题解 - 双指针](https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8F%8C%E6%8C%87%E9%92%88.md)
 
