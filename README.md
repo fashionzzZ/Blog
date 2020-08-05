@@ -31,6 +31,7 @@
 * [模版方法](./docs/design-pattern/template-method.md)
 
 **消息中间件**
+
 * [JMS标准](./docs/mq/jms.md)
 * RocketMQ 概念
 * RocketMQ 特性
@@ -56,8 +57,14 @@
 
 * 概念特征
 * 集群
-* Reactive
+* 基于Reactive完成分布式锁
 * 使用场景和常见问题
+
+**Netty**
+
+* IO模型
+* Linux底层IO原理
+* ...
 
 **Elasticsearch**
 
