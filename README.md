@@ -99,13 +99,7 @@
 
 **算法**
 
-* 常见排序
-* [双指针](./docs/algorithm/two-pointer.md)
-* 贪心
-* 二分
-* 分治
-* 动态规划
-* 搜索
+* [LeetCode算法笔记](./docs/algorithm/leetcode-solution.md)
 
 **中间件**
 
