@@ -65,6 +65,33 @@ class Solution {
 
 `双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。`
 
+### [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+
+```java
+/**
+ * 题解：
+ *
+ * 数组完成排序后，我们可以放置两个指针i和j，其中i是慢指针，而j是快指针。只要 nums[i] = nums[j] ，我们就增加j以跳过重复项。
+ * 当我们遇到 nums[i] != nums[j] 时，跳过重复项的运行已经结束，因此我们必须把它 nums[j] 的值复制到 nums[i + 1] 。
+ * 然后递增i，接着我们将再次重复相同的过程，直到j到达数组的末尾为止。
+ */
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+}
+```
+
 ### [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
 
 给定一个已按照升序排列的有序数组，找到两个数使得它们相加之和等于目标数。
@@ -272,45 +299,31 @@ class Solution {
 
 ### [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
-给定两个有序整数数组 *nums1* 和 *nums2*，将 *nums2* 合并到 *nums1* 中*，*使得 *num1* 成为一个有序数组。
-
-#### 说明
-
-> - 初始化 *nums1* 和 *nums2* 的元素数量分别为 *m* 和 *n*。
-> - 你可以假设 *nums1* 有足够的空间（空间大小大于或等于 *m + n*）来保存 *nums2* 中的元素。
-
-#### 示例
-
-> **输入:**
-> nums1 = [1,2,3,0,0,0], m = 3
-> nums2 = [2,5,6],           n = 3
->
-> **输出:** [1,2,2,3,5,6]
-
-#### 思路
-
-这里我用了一个新的数组来存放结果，思路类似外排。
-
-#### 代码
-
 ```java
+/**
+ * 题解：
+ *
+ * 两个指针，左指针指向nums1的第一个元素；右指针指向nums2的第一个元素。
+ * 声明一个新数组，长度为上面两个数组长度的和，并声明一个指针指向0号元素。
+ * 循环判断，两个数组中的元素，哪个小就拷贝到新数组，新数组和元素小的数组的指针向右移动一位
+ * 其中一个数组已经遍历完成，拷贝另一个数组剩下的元素到新数组
+ * 将新数组中的元素拷贝到nums1中
+ */
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int i = 0, j = 0, index = 0;
-        int[] newNums = new int[m + n];
-        while (i < m || j < n) {
-            if (i < m) {
-                if (j < n) {
-                    newNums[index++] = nums1[i] <= nums2[j] ? nums1[i++] : nums2[j++];
-                } else {
-                    newNums[index++] = nums1[i++];
-                }
-            } else {
-                newNums[index++] = nums2[j++];
-            }
+        int i = 0, l = 0, r = 0;
+        int[] newArr = new int[m + n];
+        while (l < m && r < n) {
+            newArr[i++] = nums1[l] <= nums2[r] ? nums1[l++] : nums2[r++];
         }
-        for (int k = 0; k < newNums.length; k++) {
-            nums1[k] = newNums[k];
+        while (l < m) {
+            newArr[i++] = nums1[l++];
+        }
+        while (r < n) {
+            newArr[i++] = nums2[r++];
+        }
+        for (int k = 0; k < newArr.length; k++) {
+            nums1[k] = newArr[k];
         }
     }
 }
