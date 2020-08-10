@@ -400,7 +400,7 @@ public class TestExchanger {
 `该类不属于AQS下`
 
 - LockSupport.park()方法可以阻塞指定的一个线程
-- LockSupport.unpark(Thread)方法可以让指定的一个线程接触阻塞继续运行
+- LockSupport.unpark(Thread)方法可以让指定的一个线程结束阻塞继续运行
 - unpark方法可以先与park方法执行
 
 ```java
