@@ -733,9 +733,7 @@ Spring使用了三级缓存解决了循环依赖的问题。在populateBean()给
 3. BeanFactoryPostProcessor：Bean工厂的后置处理器，在bean定义(bean definitions)加载完成后，bean尚未初始化前执行。
 4. BeanDefinitionRegistryPostProcessor：继承于BeanFactoryPostProcessor。其自定义的方法postProcessBeanDefinitionRegistry会在bean定义(bean definitions)将要加载，bean尚未初始化前真执行，即在BeanFactoryPostProcessor的postProcessBeanFactory方法前被调用。
 
-### Spring MVC的工作流程（源码层面）
-
-1. 
+### Spring MVC的工作流程
 
 ### 过滤器、拦截器
 
@@ -921,11 +919,15 @@ Kafka最初考虑的问题是，customer应该从brokes拉取消息还是brokers
 
 ## 计算机网路
 
+### OSI 七层模型
 ![七层体系结构图](https://ultroncode.com/source/687ef5052f08b7da12d60379e191d772.jpg)
 
-### OSI 七层模型
-
 ### TCP/IP 四层模型
+
+1. 应用层 HTTP/FTP/SMTP
+2. 传输层 TCP/UDP
+3. 网际层 IP
+4. 网络接口层
 
 ### 计算机网络的五层模型
 
