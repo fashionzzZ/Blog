@@ -301,7 +301,7 @@ public class TestArrayBlockingQueue {
 ### PriorityQueue
 
 PriorityQueue是从AbstractQueue继承的。
-PriorityQueue特点是往里面添加数据的时候，它内部进行了排序，按照最小的优先。它内部实现的结构是一个二叉树，这个二叉树可以认为是堆排序里面的那个最小堆（小顶堆）。
+PriorityQueue特点是往里面添加数据的时候，它内部进行了排序，按照最小的优先。它内部实现的结构是一个二叉树，这个二叉树可以认为是堆排序里面的那个最小堆。
 
 ```java
 public class TestPriorityQueque {

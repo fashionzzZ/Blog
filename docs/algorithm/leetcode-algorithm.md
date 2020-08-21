@@ -1,6 +1,7 @@
-# LeetCode算法笔记
+# LeetCode - 算法
 
----
+* [哈希](?id=hash)
+* [双指针](?id=双指针)
 
 ## Hash
 
