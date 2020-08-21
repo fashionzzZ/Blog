@@ -1,7 +1,9 @@
-# LeetCode - 算法
+# LeetCode - 算法思想
 
 * [哈希](#hash)
 * [双指针](#双指针)
+
+---
 
 ## Hash
 

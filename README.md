@@ -100,7 +100,7 @@
 
 **算法**
 
-* [LeetCode - 算法](./docs/algorithm/leetcode-algorithm.md)
+* [LeetCode - 算法思想](./docs/algorithm/leetcode-algorithm.md)
 * [LeetCode - 数据结构](./docs/algorithm/leetcode-data-structure.md)
 * [LeetCode精选TOP面试题](./docs/algorithm/leetcode-top-interview-questions.md)
 
