@@ -33,6 +33,7 @@ public class Solution {
 ### [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 这道题，题目让用迭代和递归两种方式实现。`画个图就明白了`
+
 迭代：两个指针，一个指向当前节点的pre节点，一个指向当前节点的next节点，将当前节点的next指针指向pre节点，pre节点更新为当前节点，将之前的next节点作为当前节点，循环。
 
 ```java
