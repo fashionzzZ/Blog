@@ -324,7 +324,30 @@ class Solution {
 }
 ```
 
+### [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)
 
+我们可以使用两个指针来做，pre指向奇节点，cur指向偶节点，然后把偶节点cur后面的那个奇节点提前到pre的后面，然后pre和cur各自前进一步，此时cur又指向偶节点，pre指向当前奇节点的末尾，以此类推直至把所有的偶节点都提前了即可。
+
+```java
+class Solution {
+    public ListNode oddEvenList(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+        ListNode pre = head;
+        ListNode cur = head.next;
+        while (cur != null && cur.next != null) {
+            ListNode tmp = pre.next;
+            pre.next = cur.next;
+            cur.next = pre.next.next;
+            pre.next.next = tmp;
+            pre = pre.next;
+            cur = cur.next;
+        }
+        return head;
+    }
+}
+```
 
 ---
 
