@@ -359,6 +359,107 @@ class Solution {
 
 ## 字符串
 
+### [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+
+这不算一道难题，核心点就在于使用哈希表映射，我们还是用一个数组来代替哈希表。我们先判断两个字符串长度是否相同，不相同直接返回false。若相同，则初始化26个字母哈希表，遍历字符串s和t，s 负责在对应位置增加，t 负责在对应位置减少，如果哈希表的值都为 0，则二者是字母异位词。
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] map = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            map[s.charAt(i) - 'a']++;
+            map[t.charAt(i) - 'a']--;
+        }
+        for (int i : map) {
+            if (i != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+### [409. 最长回文串](https://leetcode-cn.com/problems/longest-palindrome/)
+
+使用长度为 128 的整型数组来统计每个字符出现的个数，每个字符有偶数个可以用来构成回文字符串。因为回文字符串最中间的那个字符可以单独出现，所以如果有单独的字符就把它放到最中间。
+
+```java
+class Solution {
+    public int longestPalindrome(String s) {
+        int[] map = new int[128];
+        for (char c : s.toCharArray()) {
+            map[c]++;
+        }
+        int palindrome = 0;
+        for (int count : map) {
+            palindrome += (count / 2) * 2;
+        }
+        if (palindrome < s.length()) {
+            palindrome++;
+        }
+        return palindrome;
+    }
+}
+```
+
+### [205. 同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/)
+
+记录一个字符上次出现的位置，如果两个字符串中的字符上次出现的位置一样，那么就属于同构。
+
+```java
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        int[] sMap = new int[128];
+        int[] tMap = new int[128];
+        char[] sChars = s.toCharArray();
+        char[] tChars = t.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
+            char sc = sChars[i], tc = tChars[i];
+            if (sMap[sc] != tMap[tc]) {
+                return false;
+            }
+            sMap[sc] = i + 1;
+            tMap[tc] = i + 1;
+        }
+        return true;
+    }
+}
+```
+
+### [647. 回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)
+
+枚举每一个可能的回文中心，然后用两个指针分别向左右两边拓展，当两个指针指向的元素相同的时候就拓展，否则停止拓展。
+
+```java
+class Solution {
+    private int count = 0;
+
+    public int countSubstrings(String s) {
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            extend(chars, i, i);     // 奇数情况
+            extend(chars, i, i + 1); // 偶数情况
+        }
+        return count;
+    }
+
+    public void extend(char[] chars, int start, int end) {
+        while (start >= 0 && end < chars.length && chars[start] == chars[end]) {
+            start--;
+            end++;
+            count++;
+        }
+    }
+}
+```
+
+
+
 ## 数组和矩阵
 
 ## 图
