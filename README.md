@@ -1,5 +1,7 @@
 # Fashion's Blog - 持续更新中...
 
+[![Page Views Count](https://badges.toozhao.com/badges/01EH40WJ9KR6JNNXNAJWWR94TG/green.svg)](https://badges.toozhao.com/badges/01EH40WJ9KR6JNNXNAJWWR94TG/green.svg)
+
 **多线程与高并发**
 
 * [初识线程](./docs/juc/thread.md)
@@ -65,6 +67,10 @@
 
 * IO模型
 * Linux底层IO原理
+* 全手写急速理解Netty模型及IO模型应用实战
+* Netty之IO模型开发本质手写部分实现推导篇
+* 全手写基于Netty的RPC框架自定义协议，连接池
+* 全手写基于Netty的RPC框架 协议编解码问题 粘包拆包与内核关系
 * ...
 
 **Elasticsearch**
@@ -72,11 +78,6 @@
 * 分布式架构原理
 * 写入数据的原理
 * 查询效率优化
-
-**Spring**
-
-* IOC
-* AOP
 
 **Spring Boot**
 * [启动过程](./docs/springboot/springboot-start-process.md)
@@ -88,14 +89,18 @@
 
 * 概述
 * 独立微服务编写
-* 服务注册与发现
-* 服务间调用
+* Eureka服务注册与发现
 * Ribbon负载均衡
 * Feign声明式REST调用
-* 熔断
-* 网关
-* 配置中心
+* Hystrix降级、熔断、隔离
+* gateway、zuul网关
+* config配置中心
 * 链路追踪和健康检查
+* nacos做注册中心和配置中心
+* sentinel做限流、熔断、降级
+* dubbo做服务调用和LB
+* RocketMQ做异步处理和柔性事务
+* seata做分布式事务
 * ...
 
 **算法**
@@ -129,3 +134,13 @@
 * 概念
 * 基于GitLab和GitLab Runner构建CI/CD
 * 基于GitHub和Jenkins构建CI/CD
+
+**TODO**
+
+`一个完整开源项目-电商项目`
+
+- 基于Spring Cloud Alibaba（暂定）
+- 基于DDD（领域驱动设计）
+- 代码追求高内聚、低耦合
+- 稳定、高性能、可扩展、开箱即用
+
