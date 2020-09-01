@@ -1,6 +1,6 @@
 # Fashion's Blog - 持续更新中...
 
-[![Page Views Count](https://badges.toozhao.com/badges/01EH40WJ9KR6JNNXNAJWWR94TG/green.svg)](https://badges.toozhao.com/badges/01EH40WJ9KR6JNNXNAJWWR94TG/green.svg)
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=fashionzzZ.Blog)
 
 **多线程与高并发**
 
