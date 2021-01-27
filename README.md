@@ -135,12 +135,4 @@
 * 基于GitLab和GitLab Runner构建CI/CD
 * 基于GitHub和Jenkins构建CI/CD
 
-**TODO**
-
-`一个完整开源项目-电商项目`
-
-- 基于Spring Cloud Alibaba（暂定）
-- 基于DDD（领域驱动设计）
-- 代码追求高内聚、低耦合
-- 稳定、高性能、可扩展、开箱即用
 
