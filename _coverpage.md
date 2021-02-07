@@ -5,8 +5,6 @@
 
 ## 个人文档网站
 
-* QQ:1006262073
-* Mail:xuefa921@163.com
 
 * [冀ICP备19008742号-1](http://beian.miit.gov.cn/)
 
