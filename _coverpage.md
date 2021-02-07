@@ -8,6 +8,8 @@
 * QQ:1006262073
 * Mail:xuefa921@163.com
 
+* [冀ICP备19008742号-1](http://beian.miit.gov.cn/)
+
 [GitHub](https://github.com/fashionzzZ)
 [开始阅读](#fashion39s-blog-持续更新中)
 
